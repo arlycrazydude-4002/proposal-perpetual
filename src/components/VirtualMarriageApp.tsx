@@ -256,7 +256,7 @@ const VirtualMarriageApp = () => {
               <Input
                 value={partnerName}
                 onChange={(e) => setPartnerName(e.target.value)}
-                className="w-48 font-serif-body"
+                className="w-48 font-serif-body shadow-lg border-2 border-certificate-border/30 focus:border-certificate-border focus:shadow-xl bg-white/90"
                 placeholder="Enter name"
               />
             </div>
@@ -265,7 +265,7 @@ const VirtualMarriageApp = () => {
               <Input
                 value={proposerName}
                 onChange={(e) => setProposerName(e.target.value)}
-                className="w-48 font-serif-body"
+                className="w-48 font-serif-body shadow-lg border-2 border-certificate-border/30 focus:border-certificate-border focus:shadow-xl bg-white/90"
                 placeholder="Enter name"
               />
             </div>
@@ -274,16 +274,41 @@ const VirtualMarriageApp = () => {
 
         <div 
           ref={certificateRef}
-          className="bg-certificate border-8 border-certificate-border shadow-2xl p-12 mx-auto max-w-3xl"
+          className="bg-certificate border-8 border-certificate-border shadow-2xl p-16 mx-auto max-w-5xl relative"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af87' fill-opacity='0.05'%3E%3Cpath d='M20 20c0-11.046-8.954-20-20-20v20h20z'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af87' fill-opacity='0.08'%3E%3Cpath d='M30 30c0-16.569-13.431-30-30-30v30h30z'/%3E%3C/g%3E%3C/svg%3E")`,
+            borderImage: 'linear-gradient(45deg, #d4af87, #8b7355, #d4af87) 8',
           }}
         >
-          {/* Ornate corner decorations */}
-          <div className="absolute top-4 left-4 text-certificate-border text-2xl">❦</div>
-          <div className="absolute top-4 right-4 text-certificate-border text-2xl">❦</div>
-          <div className="absolute bottom-4 left-4 text-certificate-border text-2xl">❦</div>
-          <div className="absolute bottom-4 right-4 text-certificate-border text-2xl">❦</div>
+          {/* Vintage corner decorations */}
+          <div className="absolute top-2 left-2 text-certificate-border text-4xl opacity-60">
+            <div className="relative">
+              ❦
+              <div className="absolute -top-1 -left-1 text-certificate-border/30 text-3xl">✧</div>
+            </div>
+          </div>
+          <div className="absolute top-2 right-2 text-certificate-border text-4xl opacity-60">
+            <div className="relative">
+              ❦
+              <div className="absolute -top-1 -right-1 text-certificate-border/30 text-3xl">✧</div>
+            </div>
+          </div>
+          <div className="absolute bottom-2 left-2 text-certificate-border text-4xl opacity-60">
+            <div className="relative">
+              ❦
+              <div className="absolute -bottom-1 -left-1 text-certificate-border/30 text-3xl">✧</div>
+            </div>
+          </div>
+          <div className="absolute bottom-2 right-2 text-certificate-border text-4xl opacity-60">
+            <div className="relative">
+              ❦
+              <div className="absolute -bottom-1 -right-1 text-certificate-border/30 text-3xl">✧</div>
+            </div>
+          </div>
+          
+          {/* Vintage border accent */}
+          <div className="absolute inset-4 border-2 border-certificate-border/20 pointer-events-none"></div>
+          <div className="absolute inset-6 border border-certificate-border/10 pointer-events-none"></div>
           
           <div className="text-center space-y-6">
             <h1 className="font-romantic text-5xl font-bold text-certificate-border mb-2">
@@ -379,7 +404,7 @@ const VirtualMarriageApp = () => {
             
             <p className="font-serif-body text-lg text-foreground mb-8 leading-relaxed">
               After going through all conditions, knowing the risks of endless love, 
-              will you accept to be Sharvesh's forever partner, his safe place, and his one and only?
+              will you accept to be Sharvesh's forever partner, his hair ruffler, his safe place, and his one and only?
             </p>
             
             <div className="space-y-4">
